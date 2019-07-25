@@ -1,4 +1,10 @@
-const socket = io('http://localhost:5000')
+const username = prompt('what is your username?')
+// const socket = io('http://localhost:5000')
+const socket = io('http://localhost:5000', {
+    query: {
+        username,
+    }
+})
 let nsSocket = ''
 socket.on('messageFromServer', (dataFromServer) => {
     console.log(dataFromServer)

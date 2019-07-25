@@ -24,7 +24,7 @@ function joinRoom(roomName){
     searchBox.addEventListener('input', (e)=>{
         let msgs = Array.from(document.getElementsByClassName('message-text'))
         msgs.forEach((msg)=>{
-            if(msg.innerText.toLowercase().indexOf(e.target.value.toLowercase()) === -1){
+            if(msg.innerText.toLowerCase().indexOf(e.target.value.toLowerCase()) === -1){
                 msg.style.display = 'none'
             }else{
                 msg.style.display = 'block'
