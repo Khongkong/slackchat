@@ -67,7 +67,7 @@ namespaces.forEach((namespace)=>{
 
 function updateUserInRoom(namespace, roomToJoin){
     io.of(namespace.endpoint).in(roomToJoin).clients((err, clients)=>{
-        // console.log(`there are ${clients.length} members in this room`)
+        console.log(`there are ${clients.length} members in this room`)
         io.of(namespace.endpoint).in(roomToJoin).emit('updateMembers', clients.length)
     })
 }
